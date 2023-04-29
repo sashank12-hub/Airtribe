@@ -20,7 +20,7 @@ const putPreferences = (req, res) => {
   if (email) {
     const updatedUser = userData.map((user) => {
       if (user.email === email) {
-        user.preference = preference.split(" ");
+        user.preference = preference.split(",");
       }
       return user;
     });

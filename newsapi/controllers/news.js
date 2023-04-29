@@ -9,6 +9,9 @@ const News = (req, res) => {
   }
   const user = users.find((user) => user.email === email);
   const preference = user.preference;
+  if(preference.length===0){
+    res.status(200).send({"message":"there are no prefrerences"});
+  }
   const apiRequests = preference.map((pref) =>
     axios.get(
       `https://gnews.io/api/v4/top-headlines?category=${pref}&lang=en&country=IND&max=5&apikey=${apikey}`

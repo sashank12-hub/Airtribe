@@ -11,15 +11,21 @@ const jwtCallback = (err,data,req,next) =>{
         req.body.message = "wrong token"
         next();
     }
-    const { email,exp} =data;
-    const isValidToken =  isTokenValid(exp*1000);
-    if(!isValidToken){
-        req.body.email = undefined;
-        req.body.message = "token expired"
-        next();
+    else {
+        const { email,exp} =data;
+        const isValidToken =  isTokenValid(exp*1000);
+        if(!isValidToken){
+            req.body.email = undefined;
+            req.body.message = "token expired"
+            next();
+        }
+        else {
+            req.body.email =email;
+            next();
+        }
+       
     }
-    req.body.email =email;
-    next();
+   
     
 
 
@@ -30,8 +36,11 @@ const verifyToken =(req,res,next)=>{
     if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {
         jwt.verify(req.headers.authorization.split(' ')[1], process.env.SECRET, (err,data)=>jwtCallback(err,data,req,next));   
     }
-    req.email = undefined;
-    next();
+    else {
+        req.body.email = undefined;
+        return next();
+    }
+   
 }
 
 module.exports =verifyToken;

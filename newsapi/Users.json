@@ -29,6 +29,12 @@
     "name": "sashank",
     "email": "sasddhanffk@gmail.com",
     "password": "$2b$08$HV.jsnBXUTCSgQja6EGSLegaTgzGLjKWAUXrl6dObZLxE90FXOiaS",
-    "preference": ["bayas,sashank123"]
+    "preference": ["sports,'general"]
+  },
+  {
+    "name": "s",
+    "email": "sashank",
+    "password": "$2b$08$1LsxrWkXDdjY8LBvP1.KdOg2LKa/eYxEnLCZV56hbdCsIOj6y9/nG",
+    "preference": []
   }
 ]

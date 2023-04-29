@@ -4,7 +4,7 @@ const path = require("path");
 const userData = JSON.parse(JSON.stringify(users));
 const getPreferences = (req, res) => {
   const { email, message } = req.body;
-  !email && res.status(400).send({ message: message });
+  !email && res.status(401).send({ message: message });
   if (email) {
     const preference =
       userData?.find((user) => user.email === email)?.preference || [];
@@ -16,7 +16,7 @@ const getPreferences = (req, res) => {
 const putPreferences = (req, res) => {
   const writepath = path.join(__dirname, "..", "Users.json");
   const { email, message, preference } = req.body;
-  !email && res.status(400).send({ message: message });
+  !email && res.status(401).send({ message: message });
   if (email) {
     const updatedUser = userData.map((user) => {
       if (user.email === email) {

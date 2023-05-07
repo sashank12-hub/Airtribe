@@ -1,6 +1,7 @@
 const users = require("../Users.json");
 const fs = require("fs");
 const path = require("path");
+var string = require("string-sanitizer");
 const userData = JSON.parse(JSON.stringify(users));
 const getPreferences = (req, res) => {
   const { email, message } = req.body;
@@ -20,7 +21,8 @@ const putPreferences = (req, res) => {
   if (email) {
     const updatedUser = userData.map((user) => {
       if (user.email === email) {
-        user.preference = preference.split(",");
+       let pre= string.sanitize.keepSpace(preference);
+        user.preference = pre.split(" ");
       }
       return user;
     });

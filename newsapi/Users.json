@@ -1,0 +1,40 @@
+[
+  {
+    "name": "sashank",
+    "email": "sashank@gmail.com",
+    "password": "$2b$08$t7K8g4LX0rHaNGbeMOPZeeRDEYa0lHjc/g2ktzlueHW4VcFB7eoce"
+  },
+  {
+    "name": "sashank",
+    "email": "sashank@gmail.com",
+    "password": "$2b$08$NUtRXrZkFlsADpDzIFY.I.ruKeiRaEjbhedqMTMyUNMxCnwUZQvw2"
+  },
+  {
+    "name": "sashank",
+    "email": "sashank@gmail.com",
+    "password": "$2b$08$bNCAJBT2rbLB6rRBs1gUsOuYnunQ6bR097DuPueMVf/K2KQKoVGYa"
+  },
+  {
+    "name": "sashank",
+    "email": "sashank@gmail.com",
+    "password": "$2b$08$aX2fXqKGZ0b7Dy5uButMkeXkfOd.VD0adVVOQ3/L4c2mm9JeudjBe"
+  },
+  {
+    "name": "sashank",
+    "email": "sashanffk@gmail.com",
+    "password": "$2b$08$hdA0bSv.uYxX6CBKBH6/sOD8oqDvytTLQ0gQCRWD5eWYtdUGGtDby",
+    "preference": ["sports"]
+  },
+  {
+    "name": "sashank",
+    "email": "sasddhanffk@gmail.com",
+    "password": "$2b$08$HV.jsnBXUTCSgQja6EGSLegaTgzGLjKWAUXrl6dObZLxE90FXOiaS",
+    "preference": ["sports,'general"]
+  },
+  {
+    "name": "s",
+    "email": "sashank",
+    "password": "$2b$08$1LsxrWkXDdjY8LBvP1.KdOg2LKa/eYxEnLCZV56hbdCsIOj6y9/nG",
+    "preference": []
+  }
+]

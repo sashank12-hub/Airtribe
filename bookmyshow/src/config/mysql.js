@@ -5,7 +5,7 @@ const sequalize = new Sequalize(process.env.DB_NAME, process.env.USER_NAME, proc
   dialect: "mysql",
   host: "localhost",
 });
-
+console.log(process.env.PASSWORD,'sashank');
 // Connection check
 const connectToDB = async () => {
   try {

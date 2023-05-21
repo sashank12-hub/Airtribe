@@ -1,11 +1,10 @@
 const Sequalize = require("sequelize");
-console.log(process.env.PASSWORD)
+require('dotenv').config()
 // setup a connection
 const sequalize = new Sequalize(process.env.DB_NAME, process.env.USER_NAME, process.env.PASSWORD, {
   dialect: "mysql",
   host: "localhost",
 });
-console.log(process.env.PASSWORD,'sashank');
 // Connection check
 const connectToDB = async () => {
   try {
